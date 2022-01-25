@@ -41,7 +41,7 @@ func (d deck) saveToFile(filename string) error {
 }
 
 func newDeckFromFile(filename string) deck {
-	bs, err := ioutil.ReadFile("my_cards")
+	bs, err := ioutil.ReadFile(filename)
 	if err != nil {
 		fmt.Println("error:", err)
 		os.Exit(1)
